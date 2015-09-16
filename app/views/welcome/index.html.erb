@@ -1,2 +1,43 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<section id="banner">
+  <div class="banner_content">
+    <h1>Notebook</h1>
+    <p>Your online notebook. Never forget an idea again</p>
+    <button><%= link_to 'Sign Up', new_user_registration_path %></button>
+  </div>
+</section>
+<section id="testimonial">
+  <div class="wrapper">
+    <p class="quote"></p>Notebook application with awesome text editing features.</p>	
+    <p class="name"> - Shankar</p>
+  </div>
+</section>
+
+<section id="callouts">
+	<div class="callout_inner">
+		<div class="wrapper">
+			<div class="callout">
+				<h2>Notes</h2>
+				<p>Viral Echo Park Intelligentsia tattooed, craft beer organic authentic polaroid tousled mlkshk church-key. Fanny pack Banksy vegan  authentic Helvetica.</p>
+      </div>
+			<div class="callout">
+				<h2>Rocket</h2>
+				<p>Viral Echo Park Intelligentsia tattooed, craft beer organic authentic polaroid tousled mlkshk church-key. Fanny pack Banksy vegan  authentic Helvetica.</p>
+      </div>
+			<div class="callout">
+				<h2>Lightning</h2>
+				<p>Viral Echo Park Intelligentsia tattooed, craft beer organic authentic polaroid tousled mlkshk church-key. Fanny pack Banksy vegan  authentic Helvetica.</p>
+      </div>
+		</div>		
+	</div>
+</section>
+
+<section id="bottom_cta">
+	<div class="wrapper">
+		<h2>For Realz!</h2>
+		<p>I want you to sign up... If you don’t. I will find you!</p>
+		<button><%= link_to "Click Meee!!!", new_user_registration_path %></button>
+	</div>	
+</section>
+<footer>
+	<p> &copy; Shankar</p>
+</footer>	
