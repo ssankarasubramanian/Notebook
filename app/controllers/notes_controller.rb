@@ -19,8 +19,10 @@ class NotesController < ApplicationController
     @note = current_user.notes.build(note_params)
     
     if @note.save
+      flash[:notice] ="Your note was created successfully"
       redirect_to @note
     else
+      flash.now[:alert]= "Your note was not created.Try it again"
       render 'new'
     end
     
@@ -32,14 +34,17 @@ class NotesController < ApplicationController
   
   def update
     if @note.update(note_params)
+      flash[:notice] ="Your note was edited successfully"
       redirect_to @note
     else
+      flash.now[:alert]= "Your could not be edited.Try it again"
       render 'edit'
     end
   end
   
   def destroy
     @note.destroy
+    flash[:alert]= "Your note has been deleted successfully"
     redirect_to notes_path
   end
   

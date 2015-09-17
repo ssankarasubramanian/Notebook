@@ -20,7 +20,7 @@ $green: #33CD99;
   z-index: 999;
   background: rgba(51, 205, 153, 0.65);
   .alert, .notice {
-    padding: 2.5rem 0;
+    padding: 2rem 0;
     text-align: center;
     margin: 0;
     font-size: 1.25rem;
@@ -41,6 +41,12 @@ body {
 
 .wrapper_with_padding {
 	width: 80%;
+	margin: 0 auto;
+	padding: 3.5rem 0;
+}
+
+.wrapper_for_form{
+	width: 20%;
 	margin: 0 auto;
 	padding: 3.5rem 0;
 }
@@ -69,6 +75,18 @@ button, .button {
 .button {
 	color: white;
 	margin: 2rem 0;
+}
+.buttons {
+		margin-top: 0.3rem;
+		a.button {
+			padding: .5rem 2rem;
+			border-radius: 2rem;
+			text-decoration: none;
+			color: $green;
+			border: 5px solid $light_gray;
+			@include bold_font;
+			background: transparent;
+		}
 }
 
 a {
@@ -124,17 +142,22 @@ footer {
 	}
 }
 
+
+
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
 	margin-bottom: 1rem;
 	border: 1px solid $light_gray;
 	border-radius: .4rem;
+	outline: none;
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
 	height: 40px;
+	outline: none;
 }
 
 textarea {
 	min-height: 200px;
 }
+
