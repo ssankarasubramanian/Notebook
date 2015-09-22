@@ -1,6 +1,7 @@
 <%= simple_form_for @note,html: { class: 'form-horizontal' } do |f| %>
   <%= f.input :title %>
   <%= f.input :content %>
+  <%= f.association :categorization, collection: current_user.categorizations , as: :radio_buttons%>
   <%= f.button :submit, class:"button" %>
 <% end %>
 

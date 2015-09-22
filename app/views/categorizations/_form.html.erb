@@ -1,0 +1,8 @@
+<%= simple_form_for @category,html: { class: 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit, class:"button" %>
+<% end %>
+
+<div class="buttons">
+    <%= link_to 'Cancel', :back, class: "button" %>
+</div>

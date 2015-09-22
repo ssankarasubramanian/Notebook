@@ -4,6 +4,7 @@ class NotesController < ApplicationController
   
   def index
     @notes= Note.where(user_id: current_user) 
+    @categories= Categorization.where(user_id: current_user) 
   end
   
   def show
@@ -51,11 +52,12 @@ class NotesController < ApplicationController
   private
   
     def find_note
-      @note = Note.find(params[:id])
+      @note = current_user.notes.find_by(id: params[:id])
+      redirect_to notes_path, notice: "Not authorized to view this note" if @note.nil?
     end
     
     def note_params
-      params.require(:note).permit(:title, :content)
+      params.require(:note).permit(:title, :content, :categorization_id)
     end
   
 end

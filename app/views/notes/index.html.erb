@@ -1,5 +1,22 @@
+
 <div class="wrapper_with_padding">
+  <div class="dropdown">
+      <%= link_to '#', class: "btn btn-default dropdown-toggle", "data-toggle" => "dropdown" do %>
+        Category <b class="caret"></b>
+      <% end %>
+      <ul class="dropdown-menu">
+        <% @categories.each do |category| %>
+          <li><%= link_to category.name, categorization_path(category) %></li>
+        <% end %>
+          <li class="divider"></li>
+          <li>
+            <%= link_to 'New Caetgory', new_categorization_path %>
+          </li>
+      </ul>
+    </div>
+  
   <div class="clearfix" id="notes">
+    
     <% unless @notes.blank? %>
         <% @notes.each do |note| %>
           <%= link_to(note) do %>
