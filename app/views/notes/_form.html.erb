@@ -1,7 +1,20 @@
-<%= simple_form_for @note,html: { class: 'form-horizontal' } do |f| %>
+<%= simple_form_for @note do |f| %>
+  <% if @note.errors.any? %>
+    <div class="alert alert-danger">
+      <h2><%= pluralize(@note.errors.count, "error") %> prohibited this pin from being saved:</h2>
+
+      <ul>
+      <% @note.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
   <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.association :categorization, collection: current_user.categorizations , as: :radio_buttons%>
+  <%= f.input :content, as: :bootsy, editor_options: { image: false } %>
+  <%= f.association :categorization, collection: current_user.categorizations , as: :radio_buttons, prompt: "Choose a category"%>
   <%= f.button :submit, class:"button" %>
 <% end %>
 

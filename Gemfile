@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form', '~> 3.1.1'
 gem 'devise', '~> 3.5.2'
+gem 'bootsy'
 
 group :development, :test do
   gem 'byebug'

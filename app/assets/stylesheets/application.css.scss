@@ -4,7 +4,7 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "bootsy";
 @import 'normalize.css';
 @import 'global.css.scss';
 @import 'notes.css.scss';
